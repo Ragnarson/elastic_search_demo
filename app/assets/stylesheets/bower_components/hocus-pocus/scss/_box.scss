@@ -1,0 +1,22 @@
+.box {
+  padding: halve($spacing-unit);
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.box-informative {
+  background: lighten($color-informative, 25%);
+  color: darken($color-informative, 25%);
+}
+
+.box-positive {
+  background: lighten($color-positive, 25%);
+  color: darken($color-positive, 25%);
+}
+
+.box-negative {
+  background: lighten($color-negative, 25%);
+  color: darken($color-negative, 25%);
+}

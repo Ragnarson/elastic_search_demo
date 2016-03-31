@@ -1,0 +1,27 @@
+{
+  "name": "hocus-pocus",
+  "version": "0.2.6",
+  "homepage": "http://hocus-pocus.io",
+  "authors": [
+    "Bartlomiej Kozal <bkzl@me.com>"
+  ],
+  "description": "Design-free Sass framework",
+  "main": "hocus-pocus.scss",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "build",
+    "docs",
+    "node_modules",
+    "Gulpfile.js",
+    "package.json",
+    ".codeclimate.yml",
+    ".scss-lint.yml"
+  ]
+}
