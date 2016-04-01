@@ -22,9 +22,6 @@ class Autocompleter < Struct.new(:query)
   end
 
   def build_hint(record)
-    case record.class.to_s
-    when "User" then "Name: #{record.name}, Country: #{record.country}, City: #{record.city}"
-    when "House" then "City: #{record.city}, Information: #{record.information}"
-    end
+    BuildHint.call(record)
   end
 end
