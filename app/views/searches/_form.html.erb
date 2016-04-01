@@ -1,7 +1,7 @@
 <h2>Let's do some searching!</h2>
 
-<%= form_tag "/searches", method: :post, class: "form-inline" do %>
-  <%= text_field_tag "search_query" %>
+<%= form_tag "/searches", method: :post, class: "form-inline", remote: true do %>
+  <%= text_field_tag "search_query", "", class: "js-autocomplete" %>
   <%= submit_tag "Save" %>
-  <div id="results"/>
+  <div id="results"></div>
 <% end %>
