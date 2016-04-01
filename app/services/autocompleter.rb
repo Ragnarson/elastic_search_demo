@@ -17,8 +17,32 @@ class Autocompleter < Struct.new(:query)
 
   private
 
+  def search_query
+    {
+      "size": 50,
+      "query": {
+        "function_score": {
+          "query": {
+            "match": {
+              "_all": {
+                "query": query,
+                "operator": "and",
+              }
+            }
+          },
+          "functions": [
+            {
+              "filter": { "term": { "_type": "house" }},
+              "weight": 5_000
+            }
+          ]
+        }
+      }
+    }
+  end
+
   def results
-    Elasticsearch::Model.search(query, MODELS_TO_SEARCH).records
+    Elasticsearch::Model.search(search_query, MODELS_TO_SEARCH).records
   end
 
   def build_hint(record)
