@@ -1,0 +1,6 @@
+<%= form_for House.new, class: "form-inline" do |f| %>
+  <%= f.text_field :city, placeholder: "City" %>
+  <%= f.text_field :information, placeholder: "Information" %>
+
+  <%= f.submit %>
+<% end %>

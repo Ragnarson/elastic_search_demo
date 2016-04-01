@@ -1,7 +1,10 @@
 <div class="container">
   <div class="grid grid-center">
-    <div class="grid-item 2/3">
+    <div class="grid-item 3/4">
       <h1>Elasticsearch demo</h1>
+
+      <%= render "/users/table" %>
+      <%= render "/houses/table" %>
 
       <%= form_tag "/searches", method: :post, class: "form-inline" do %>
         <%= text_field_tag "search_query" %>
