@@ -1,28 +1,14 @@
-== README
+### This is a sample application showing power of [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
 
-Things you may want to cover:
+1. Make sure you got [Elasticsearch](https://www.elastic.co/products/elasticsearch) installed and running
+1. Clone the app, bundle it, run migrations and seeds to insert some data to search
+1. In the text input you can search by any record of `User` or `House` classes
+1. You can search by exact word, phrase and also by any part (from 2 chars long) of any word
+1. Search results are shown in a table below text input. `House` records are always on top
+1. When clicking the `Save` button you will see a js alert with details of selected record
+1. You can also add new records to try some fancy search queries
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+_If you want to know exactly what is going on and how it works please follow commits one by one.
+For better understanding functionalities were added in small steps._
